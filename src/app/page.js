@@ -1,4 +1,5 @@
 import Heading from "@/Components/heading";
+import { Navbar } from "@/Components/Navbar";
 import Image from "next/image";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         hello nextjs 
       </h1>
       <Heading/>
+      {/* <Navbar /> */}
     </main>
   );
 }

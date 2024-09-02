@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { Navbar } from "@/Components/Navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,10 @@ export default function RootLayout({ children }) {
     {
       title:'About',
       path:'/about'
+    },
+    {
+      title:'Blogs',
+      path:'/blogs'
     },
   ]
 
@@ -55,6 +60,7 @@ export default function RootLayout({ children }) {
             </button>
           </div>
         </nav>
+        {/* <Navbar></Navbar> */}
         <main className="p-6">
           {children}
         </main>
