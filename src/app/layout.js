@@ -11,7 +11,30 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <nav className="flex bg-red-200 justify-between items-center p-4 shadow-md">
+          <div className="flex items-center space-x-6">
+            <h6 className="text-lg font-bold">Logo</h6>
+            <ul className="flex space-x-8">
+              <li className="hover:text-red-600 cursor-pointer">Home</li>
+              <li className="hover:text-red-600 cursor-pointer">About</li>
+              <li className="hover:text-red-600 cursor-pointer">Blogs</li>
+              <li className="hover:text-red-600 cursor-pointer">Something</li>
+            </ul>
+          </div>
+          <div>
+            <button className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600">
+              Register
+            </button>
+          </div>
+        </nav>
+        <main className="p-6">
+          {children}
+        </main>
+        <footer className="bg-red-200 p-4 text-center text-sm mt-8">
+          This is a footer for the website
+        </footer>
+      </body>
     </html>
   );
 }

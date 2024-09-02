@@ -1,3 +1,4 @@
+import Heading from "@/Components/heading";
 import Image from "next/image";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
       <h1>
         hello nextjs 
       </h1>
+      <Heading/>
     </main>
   );
 }
