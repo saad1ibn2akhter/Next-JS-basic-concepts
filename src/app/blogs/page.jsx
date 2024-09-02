@@ -1,16 +1,20 @@
+import Link from 'next/link';
 import React from 'react';
 
 const page = () => {
     return (
-        <div className='h-screen'>
+        <div className=' h-full'>
             this is blogs page here!!!
 
-            <div className='p-10  border-2 border-red-200'>
+            <div className='p-10  border-2 border-red-200 h-full'>
                 {
                     blogs.map((blog, index) => <>
                         <div className='border-violet-400 border-2 p-2 m-3' key={blog?.slug}>
-                            <h1>{blog?.title}</h1>
+                            <h1 className='mb-2 font-semibold'>{blog?.title}</h1>
                             <p>{blog?.description}</p>
+                            <button className='btn border-[0.5px] border-red-500 bg-red-100 text-red-500 px-3 py-1 my-2 rounded-xl'>
+                                <Link href={`/blogs/${blog?.slug}`}>Details</Link>
+                            </button>
                         </div>
                     </>
                     )
